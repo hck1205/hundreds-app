@@ -1,17 +1,15 @@
-import { useState } from "react";
-import { PregnancyRoadmap, RecommendationPage, WeekVideoPage } from "./components";
-import type { RoadmapPageProps } from "./components/PregnancyRoadmap/PregnancyRoadmap.types";
+import { Navigate, Route, Routes } from "react-router-dom";
+import RoadmapPage from "./pages/roadmap";
+import VideosPage from "./pages/videos";
+import ProductsPage from "./pages/products";
 
 export default function App() {
-  const [page, setPage] = useState<RoadmapPageProps["activePage"]>("roadmap");
-
-  if (page === "videos") {
-    return <WeekVideoPage activePage={page} onNavigate={setPage} />;
-  }
-
-  if (page === "products") {
-    return <RecommendationPage activePage={page} onNavigate={setPage} />;
-  }
-
-  return <PregnancyRoadmap activePage={page} onNavigate={setPage} />;
+  return (
+    <Routes>
+      <Route path="/" element={<RoadmapPage />} />
+      <Route path="/videos" element={<VideosPage />} />
+      <Route path="/products" element={<ProductsPage />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
 }

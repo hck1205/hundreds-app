@@ -10,7 +10,6 @@ import {
   Subtitle,
   Title,
 } from "../PregnancyRoadmap/PregnancyRoadmap.styled";
-import type { RoadmapPageProps } from "../PregnancyRoadmap/PregnancyRoadmap.types";
 import {
   CategoryCard,
   CategoryDescription,
@@ -678,7 +677,7 @@ const getRelatedSearches = (query: string) => {
   return Array.from(related).slice(0, 8);
 };
 
-export default function RecommendationPage({ activePage, onNavigate }: RoadmapPageProps) {
+export default function RecommendationPage() {
   const [theme, setTheme] = useAtom(themeAtom);
   const [query, setQuery] = useState("");
 
@@ -729,7 +728,7 @@ export default function RecommendationPage({ activePage, onNavigate }: RoadmapPa
             <Title>추천 상품 카테고리</Title>
             <ThemeToggle theme={theme} onToggle={toggleTheme} />
           </HeaderRow>
-          <TopNav activePage={activePage} onNavigate={onNavigate} />
+          <TopNav />
           <Subtitle>
             임신 중과 신생아 시기에 필요한 필수 아이템을 카테고리로 정리했어요. 검색어는
             관련 키워드와 유의어까지 함께 검색됩니다.

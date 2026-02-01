@@ -25,7 +25,6 @@ import {
   WeekSummary,
 } from "../PregnancyRoadmap/PregnancyRoadmap.styled";
 import { getTrimesterLabel } from "../PregnancyRoadmap/PregnancyRoadmap.utils";
-import type { RoadmapPageProps } from "../PregnancyRoadmap/PregnancyRoadmap.types";
 import {
   ProductCard,
   ProductGrid,
@@ -43,7 +42,7 @@ import {
 
 const trimesterOptions: Array<1 | 2 | 3 | "all"> = ["all", 1, 2, 3];
 
-export default function WeekVideoPage({ activePage, onNavigate }: RoadmapPageProps) {
+export default function WeekVideoPage() {
   const [theme, setTheme] = useAtom(themeAtom);
   const weeksLoaded = useAtomValue(weeksLoadedAtom);
   const loadWeeks = useSetAtom(loadWeeksAtom);
@@ -67,7 +66,7 @@ export default function WeekVideoPage({ activePage, onNavigate }: RoadmapPagePro
             <Title>주차별 영상</Title>
             <ThemeToggle theme={theme} onToggle={toggleTheme} />
           </HeaderRow>
-          <TopNav activePage={activePage} onNavigate={onNavigate} />
+          <TopNav />
           <Subtitle>
             주차별로 도움이 되는 유튜브 영상과 관련 상품을 모아두었어요. 영상 아래에
             쿠팡 파트너스 링크를 연결할 수 있도록 공간을 마련해두었습니다.

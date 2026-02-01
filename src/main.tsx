@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { Global } from "@emotion/react";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
 const globalStyles = {
@@ -81,6 +82,8 @@ const globalStyles = {
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Global styles={globalStyles} />
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );

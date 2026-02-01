@@ -18,7 +18,6 @@ import {
   Disclaimer,
 } from "./PregnancyRoadmap.styled";
 import { getTrimesterLabel } from "./PregnancyRoadmap.utils";
-import type { RoadmapPageProps } from "./PregnancyRoadmap.types";
 import { themeAtom } from "../../atom/themeAtom";
 import {
   activeWeekAtom,
@@ -33,10 +32,7 @@ import { InfoDetailDrawer, WeekDetailDrawer, WeekGrid } from "../roadmap";
 
 const trimesterOptions: Array<1 | 2 | 3 | "all"> = ["all", 1, 2, 3];
 
-export default function PregnancyRoadmap({
-  activePage,
-  onNavigate,
-}: RoadmapPageProps) {
+export default function PregnancyRoadmap() {
   const [theme, setTheme] = useAtom(themeAtom);
   const [selectedTrimester, setSelectedTrimester] = useAtom(selectedTrimesterAtom);
   const [selectedWeek, setSelectedWeek] = useAtom(selectedWeekAtom);
@@ -85,7 +81,7 @@ export default function PregnancyRoadmap({
             <Title>임신 주차별 로드맵</Title>
             <ThemeToggle theme={theme} onToggle={toggleTheme} />
           </HeaderRow>
-          <TopNav activePage={activePage} onNavigate={onNavigate} />
+          <TopNav />
         </Header>
       </SectionCard>
       <SectionCard>
