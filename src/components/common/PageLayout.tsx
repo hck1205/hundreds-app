@@ -18,6 +18,23 @@ const Content = styled.div`
   gap: 32px;
 `;
 
+const SkipLink = styled.a`
+  position: absolute;
+  top: -40px;
+  left: 16px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  z-index: 100;
+
+  &:focus {
+    top: 16px;
+  }
+`;
+
 const ScrollTopButton = styled.button<{ $visible: boolean }>`
   position: fixed;
   right: 24px;
@@ -78,7 +95,8 @@ export default function PageLayout({ children }: PageLayoutProps) {
 
   return (
     <Wrapper data-theme={theme}>
-      <Content>{children}</Content>
+      <SkipLink href="#main-content">본문 바로가기</SkipLink>
+      <Content id="main-content">{children}</Content>
       <ScrollTopButton
         type="button"
         $visible={showScrollTop}

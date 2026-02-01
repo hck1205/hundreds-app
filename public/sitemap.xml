@@ -2,7 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://YOUR_DOMAIN_HERE/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://YOUR_DOMAIN_HERE/videos</loc>
+  </url>
+  <url>
+    <loc>https://YOUR_DOMAIN_HERE/products</loc>
+  </url>
+  <url>
+    <loc>https://YOUR_DOMAIN_HERE/checklist</loc>
+  </url>
+  <url>
+    <loc>https://YOUR_DOMAIN_HERE/recovery</loc>
+  </url>
+  <url>
+    <loc>https://YOUR_DOMAIN_HERE/newborn-schedule</loc>
+  </url>
+  <url>
+    <loc>https://YOUR_DOMAIN_HERE/faq</loc>
+  </url>
+  <url>
+    <loc>https://YOUR_DOMAIN_HERE/guestbook</loc>
   </url>
 </urlset>
