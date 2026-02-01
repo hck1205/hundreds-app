@@ -5,6 +5,10 @@ const paletteByTrimester = {
 } as const;
 
 export const getFetalIllustration = (week: number, trimester: 1 | 2 | 3) => {
+  if (week >= 1 && week <= 40) {
+    return `/images/week${week}.png`;
+  }
+
   const palette = paletteByTrimester[trimester];
   const svg = `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="220" height="140" viewBox="0 0 220 140">

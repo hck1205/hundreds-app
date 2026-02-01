@@ -66,6 +66,9 @@ const synonymMap: Record<string, string[]> = {
   목욕: ["아기욕조", "바디워시", "샴푸"],
   체온계: ["온도계", "발열", "건강"],
   기저귀가방: ["외출가방", "수납"],
+  임산부: ["임신", "임부", "산모"],
+  튼살: ["스트레치마크", "보습오일"],
+  허리: ["복대", "지지대", "벨트"],
 };
 
 const categories: RecommendationCategory[] = [
@@ -639,6 +642,50 @@ const categories: RecommendationCategory[] = [
         links: [
           { label: "C형", url: "https://example.com/pillow-c" },
           { label: "U형", url: "https://example.com/pillow-u" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "prenatal-care",
+    title: "임신 중 케어/편의",
+    description: "임신 기간 동안 편안함을 돕는 아이템",
+    keywords: ["임산부", "임신", "케어"],
+    items: [
+      {
+        name: "임산부 바디필로우",
+        note: "수면 자세와 허리 부담 완화",
+        keywords: ["쿠션", "허리"],
+        links: [
+          { label: "C형", url: "https://example.com/pregnancy-pillow-c" },
+          { label: "U형", url: "https://example.com/pregnancy-pillow-u" },
+        ],
+      },
+      {
+        name: "튼살 케어 오일/크림",
+        note: "건조함 완화와 피부 보습",
+        keywords: ["튼살", "보습"],
+        links: [
+          { label: "오일", url: "https://example.com/stretch-oil" },
+          { label: "크림", url: "https://example.com/stretch-cream" },
+        ],
+      },
+      {
+        name: "임산부 복대/허리지지대",
+        note: "활동 시 허리 부담 줄이기",
+        keywords: ["복대", "허리"],
+        links: [
+          { label: "복대", url: "https://example.com/maternity-belt" },
+          { label: "지지대", url: "https://example.com/maternity-support" },
+        ],
+      },
+      {
+        name: "임산부 전용 의류",
+        note: "편안한 착용감과 활동성",
+        keywords: ["임산부", "옷"],
+        links: [
+          { label: "레깅스", url: "https://example.com/maternity-leggings" },
+          { label: "원피스", url: "https://example.com/maternity-dress" },
         ],
       },
     ],

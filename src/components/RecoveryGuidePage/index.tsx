@@ -23,6 +23,18 @@ import {
 
 const recoveryGuide = [
   {
+    id: "prenatal-care",
+    title: "임신 중 컨디션 관리",
+    description: "출산 전 몸 상태를 안정적으로 유지하기",
+    items: [
+      "무리하지 않는 선에서 가벼운 운동과 스트레칭을 지속하세요.",
+      "수면 자세(옆으로 눕기)와 수면 환경을 점검하세요.",
+      "부종/요통 관리에 도움 되는 휴식 습관을 만들세요.",
+      "식사 기록을 통해 영양 균형을 체크하세요.",
+    ],
+    tips: ["불편한 증상이 지속되면 의료진과 상담하세요."],
+  },
+  {
     id: "postpartum-care",
     title: "산후조리",
     description: "회복을 최우선으로 두는 기본 원칙",
@@ -73,7 +85,7 @@ export default function RecoveryGuidePage() {
             <ThemeToggle theme={theme} onToggle={toggleTheme} />
           </HeaderRow>
           <TopNav />
-          <Subtitle>산후조리, 식단, 운동을 단계별로 정리했습니다.</Subtitle>
+          <Subtitle>임신 중 컨디션 관리부터 산후조리, 식단, 운동을 정리했습니다.</Subtitle>
         </Header>
       </SectionCard>
 

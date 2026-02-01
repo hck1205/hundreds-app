@@ -24,6 +24,7 @@ export default function Seo({
   const pageDescription = description ?? siteMeta.defaultDescription;
   const pageUrl = `${siteMeta.baseUrl}${ensureLeadingSlash(path)}`;
   const pageImage = image ?? siteMeta.defaultImage;
+  const imageAlt = `${pageTitle} 대표 이미지`;
   const jsonLdItems = Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
 
   return (
@@ -38,12 +39,14 @@ export default function Seo({
       <meta property="og:url" content={pageUrl} />
       <meta property="og:site_name" content={siteMeta.name} />
       <meta property="og:image" content={pageImage} />
+      <meta property="og:image:alt" content={imageAlt} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={siteMeta.twitterHandle} />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
       <meta name="twitter:image" content={pageImage} />
+      <meta name="twitter:image:alt" content={imageAlt} />
 
       {jsonLdItems.map((item, index) => (
         <script

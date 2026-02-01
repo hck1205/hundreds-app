@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
+import Dialog from "@mui/material/Dialog";
 import CloseIcon from "@mui/icons-material/Close";
 import Tag from "../../common/Tag";
 import InfoSection from "../../common/InfoSection";
@@ -24,6 +25,7 @@ import {
 import { PurchaseLink, PurchaseList, PurchaseSection } from "./WeekDetailDrawer.styled";
 import type { PurchaseItem } from "./WeekDetailDrawer.types";
 import { getFetalIllustration } from "../../../utils/common/fetalIllustration";
+import { useState } from "react";
 
 const renderPurchaseList = (items: PurchaseItem[]) => (
   <PurchaseList>
@@ -43,6 +45,7 @@ export default function WeekDetailDrawer() {
   const selectedTrimester = useAtomValue(selectedTrimesterAtom);
   const setInfoDrawerOpen = useSetAtom(infoDetailDrawerOpenAtom);
   const setInfoSelection = useSetAtom(infoDetailSelectionAtom);
+  const [imageOpen, setImageOpen] = useState(false);
 
   const handleInfoSelect = (category: InfoCategory, item: string) => {
     setInfoSelection({ category, item });
@@ -110,12 +113,14 @@ export default function WeekDetailDrawer() {
               component="img"
               src={getFetalIllustration(activeWeek.week, activeWeek.trimester)}
               alt={`${activeWeek.week}주차 태아`}
+              onClick={() => setImageOpen(true)}
               sx={{
                 width: 120,
                 height: 84,
                 borderRadius: 2,
                 border: "1px solid var(--border)",
                 objectFit: "cover",
+                cursor: "zoom-in",
               }}
             />
             <Box>
@@ -129,6 +134,79 @@ export default function WeekDetailDrawer() {
           </Box>
         </Box>
       ) : null}
+
+      <Dialog
+        open={imageOpen}
+        onClose={() => setImageOpen(false)}
+        aria-labelledby="week-image-title"
+        maxWidth="md"
+      >
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="space-between"
+          px={2}
+          py={1.5}
+          sx={{ borderBottom: "1px solid var(--border)" }}
+        >
+          <Typography id="week-image-title" variant="subtitle1" fontWeight={700}>
+            {activeWeek ? `${activeWeek.week}주차 태아` : "태아 이미지"}
+          </Typography>
+          <IconButton onClick={() => setImageOpen(false)} aria-label="닫기">
+            <CloseIcon />
+          </IconButton>
+        </Box>
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          p={2}
+          sx={{ backgroundColor: "var(--card)", position: "relative" }}
+        >
+          {activeWeek ? (
+            <Box
+              sx={{
+                width: "min(520px, 90vw)",
+                aspectRatio: "1 / 1",
+                borderRadius: 2,
+                border: "1px solid var(--border)",
+                overflow: "hidden",
+                backgroundColor: "var(--card-muted)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <Box
+                component="img"
+                src={getFetalIllustration(activeWeek.week, activeWeek.trimester)}
+                alt={`${activeWeek.week}주차 태아 확대 이미지`}
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  objectPosition: "center",
+                }}
+              />
+            </Box>
+          ) : null}
+          <Typography
+            variant="caption"
+            sx={{
+              position: "absolute",
+              right: 16,
+              bottom: 12,
+              color: "var(--muted)",
+              fontSize: 11,
+              backgroundColor: "rgba(0,0,0,0.04)",
+              padding: "4px 8px",
+              borderRadius: 999,
+            }}
+          >
+            AI로 생성된 그림
+          </Typography>
+        </Box>
+      </Dialog>
 
       {activeWeek?.purchases?.length ? (
         <PurchaseSection>

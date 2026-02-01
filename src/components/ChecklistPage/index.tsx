@@ -42,6 +42,18 @@ type ChecklistCategory = {
 
 const categories: ChecklistCategory[] = [
   {
+    id: "prenatal",
+    title: "임신 중 준비",
+    description: "임신 기간에 필요한 기본 체크",
+    tasks: [
+      { id: "prenatal-nutrition", label: "엽산/철분 등 영양제 섭취 계획", keywords: ["영양"] },
+      { id: "prenatal-checkups", label: "산전 검사 일정 캘린더 정리", keywords: ["검사"] },
+      { id: "prenatal-exercise", label: "무리 없는 운동/스트레칭 루틴 만들기", keywords: ["운동"] },
+      { id: "prenatal-sleep", label: "수면 자세 및 수면 환경 점검", keywords: ["수면"] },
+      { id: "prenatal-work", label: "직장/생활 일정 조정 계획", keywords: ["일정"] },
+    ],
+  },
+  {
     id: "hospital",
     title: "병원/검사",
     description: "산전 검사와 병원 일정 준비",
@@ -120,11 +132,11 @@ export default function ChecklistPage() {
       <SectionCard>
         <Header>
           <HeaderRow>
-            <Title>출산 준비 체크리스트</Title>
+            <Title>임신·출산 준비 체크리스트</Title>
             <ThemeToggle theme={theme} onToggle={toggleTheme} />
           </HeaderRow>
           <TopNav />
-          <Subtitle>출산 준비를 단계별로 정리해 빠짐없이 체크하세요.</Subtitle>
+          <Subtitle>임신 기간부터 출산 준비까지 단계별로 체크하세요.</Subtitle>
         </Header>
       </SectionCard>
 
