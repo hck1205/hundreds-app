@@ -8,6 +8,14 @@ export type WeekInfo = {
     name: string;
     url: string;
   }[];
+  videos: {
+    title: string;
+    url: string;
+  }[];
+  relatedProducts: {
+    name: string;
+    url: string;
+  }[];
   needs: string[];
   preparation: string[];
   nutrients: string[];

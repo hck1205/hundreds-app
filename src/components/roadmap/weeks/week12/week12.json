@@ -36,19 +36,39 @@
   "purchases": [
     {
       "name": "엽산",
-      "url": "https://search.shopping.naver.com/search/all?query=%EC%97%BD%EC%82%B0"
+      "url": "https://link.coupang.com/a/REPLACE_ME"
     },
     {
       "name": "임신 테스트기",
-      "url": "https://search.shopping.naver.com/search/all?query=%EC%9E%84%EC%8B%A0%20%ED%85%8C%EC%8A%A4%ED%8A%B8%EA%B8%B0"
+      "url": "https://link.coupang.com/a/REPLACE_ME"
     },
     {
       "name": "임산부 멀티비타민 (초기)",
-      "url": "https://search.shopping.naver.com/search/all?query=%EC%9E%84%EC%82%B0%EB%B6%80%20%EB%A9%80%ED%8B%B0%EB%B9%84%ED%83%80%EB%AF%BC%20%EC%B4%88%EA%B8%B0"
+      "url": "https://link.coupang.com/a/REPLACE_ME"
     },
     {
       "name": "임산부 바디필로우",
-      "url": "https://search.shopping.naver.com/search/all?query=%EC%9E%84%EC%82%B0%EB%B6%80%20%EB%B0%94%EB%94%94%ED%95%84%EB%A1%9C%EC%9A%B0"
+      "url": "https://link.coupang.com/a/REPLACE_ME"
+    }
+  ],
+  "videos": [
+    {
+      "title": "12주차 태아 성장 요약",
+      "url": "https://www.youtube.com/results?search_query=임신+12주차+태아+성장"
+    },
+    {
+      "title": "12주차 산모 체크포인트",
+      "url": "https://www.youtube.com/results?search_query=임신+12주차+산모+체크포인트"
+    }
+  ],
+  "relatedProducts": [
+    {
+      "name": "추천 상품 1",
+      "url": "https://link.coupang.com/a/REPLACE_ME"
+    },
+    {
+      "name": "추천 상품 2",
+      "url": "https://link.coupang.com/a/REPLACE_ME"
     }
   ]
 }

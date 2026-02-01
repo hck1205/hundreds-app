@@ -35,19 +35,39 @@
   "purchases": [
     {
       "name": "철분",
-      "url": "https://search.shopping.naver.com/search/all?query=%EC%B2%A0%EB%B6%84"
+      "url": "https://link.coupang.com/a/REPLACE_ME"
     },
     {
       "name": "칼슘",
-      "url": "https://search.shopping.naver.com/search/all?query=%EC%B9%BC%EC%8A%98"
+      "url": "https://link.coupang.com/a/REPLACE_ME"
     },
     {
       "name": "DHA 오메가-3",
-      "url": "https://search.shopping.naver.com/search/all?query=DHA%20%EC%98%A4%EB%A9%94%EA%B0%803%20%EC%9E%84%EC%82%B0%EB%B6%80"
+      "url": "https://link.coupang.com/a/REPLACE_ME"
     },
     {
       "name": "임산부 요가매트",
-      "url": "https://search.shopping.naver.com/search/all?query=%EC%9E%84%EC%82%B0%EB%B6%80%20%EC%9A%94%EA%B0%80%EB%A7%A4%ED%8A%B8"
+      "url": "https://link.coupang.com/a/REPLACE_ME"
+    }
+  ],
+  "videos": [
+    {
+      "title": "22주차 태아 성장 요약",
+      "url": "https://www.youtube.com/results?search_query=임신+22주차+태아+성장"
+    },
+    {
+      "title": "22주차 산모 체크포인트",
+      "url": "https://www.youtube.com/results?search_query=임신+22주차+산모+체크포인트"
+    }
+  ],
+  "relatedProducts": [
+    {
+      "name": "추천 상품 1",
+      "url": "https://link.coupang.com/a/REPLACE_ME"
+    },
+    {
+      "name": "추천 상품 2",
+      "url": "https://link.coupang.com/a/REPLACE_ME"
     }
   ]
 }

@@ -9,3 +9,8 @@ export type WeekSection = {
   title: string;
   items: string[];
 };
+
+export type RoadmapPageProps = {
+  activePage: "roadmap" | "videos";
+  onNavigate: (page: "roadmap" | "videos") => void;
+};

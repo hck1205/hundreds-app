@@ -136,7 +136,7 @@ export default function WeekDetailDrawer() {
             구매 추천 리스트
           </Typography>
           <Typography variant="body2" color="var(--muted)">
-            필요한 영양제 및 준비물을 클릭해 구매 페이지로 이동하세요.
+            필요한 영양제 및 준비물을 클릭해 쿠팡 파트너스 링크로 이동하세요.
           </Typography>
           {renderPurchaseList(activeWeek.purchases)}
         </PurchaseSection>
