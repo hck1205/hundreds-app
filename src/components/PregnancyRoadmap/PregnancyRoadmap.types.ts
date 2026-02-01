@@ -11,6 +11,6 @@ export type WeekSection = {
 };
 
 export type RoadmapPageProps = {
-  activePage: "roadmap" | "videos";
-  onNavigate: (page: "roadmap" | "videos") => void;
+  activePage: "roadmap" | "videos" | "products";
+  onNavigate: (page: "roadmap" | "videos" | "products") => void;
 };

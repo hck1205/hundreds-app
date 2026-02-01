@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { useAtomValue } from "jotai";
 import { themeAtom } from "../../atom/themeAtom";
 
@@ -18,20 +18,81 @@ const Content = styled.div`
   gap: 32px;
 `;
 
+const ScrollTopButton = styled.button<{ $visible: boolean }>`
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  border-radius: 999px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: ${({ $visible }) => ($visible ? 1 : 0)};
+  pointer-events: ${({ $visible }) => ($visible ? "auto" : "none")};
+  transform: ${({ $visible }) => ($visible ? "translateY(0)" : "translateY(6px)")};
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+`;
+
 type PageLayoutProps = {
   children: ReactNode;
 };
 
 export default function PageLayout({ children }: PageLayoutProps) {
   const theme = useAtomValue(themeAtom);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     document.body.dataset.theme = theme;
   }, [theme]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <Wrapper data-theme={theme}>
       <Content>{children}</Content>
+      <ScrollTopButton
+        type="button"
+        $visible={showScrollTop}
+        onClick={scrollToTop}
+        aria-label="위로 올라가기"
+        title="위로 올라가기"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path
+            d="M12 5l7 7-1.4 1.4L13 8.8V19h-2V8.8l-4.6 4.6L5 12l7-7z"
+            fill="currentColor"
+          />
+        </svg>
+      </ScrollTopButton>
     </Wrapper>
   );
 }

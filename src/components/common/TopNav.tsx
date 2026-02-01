@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import ActionButton from "./ActionButton";
 
-export type PageKey = "roadmap" | "videos";
+export type PageKey = "roadmap" | "videos" | "products";
 
 type TopNavProps = {
   activePage: PageKey;
@@ -31,6 +31,13 @@ export default function TopNav({ activePage, onNavigate }: TopNavProps) {
         onClick={() => onNavigate("videos")}
       >
         주차별 영상
+      </ActionButton>
+      <ActionButton
+        type="button"
+        $active={activePage === "products"}
+        onClick={() => onNavigate("products")}
+      >
+        추천 상품
       </ActionButton>
     </Nav>
   );

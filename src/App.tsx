@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PregnancyRoadmap, WeekVideoPage } from "./components";
+import { PregnancyRoadmap, RecommendationPage, WeekVideoPage } from "./components";
 import type { RoadmapPageProps } from "./components/PregnancyRoadmap/PregnancyRoadmap.types";
 
 export default function App() {
@@ -7,6 +7,10 @@ export default function App() {
 
   if (page === "videos") {
     return <WeekVideoPage activePage={page} onNavigate={setPage} />;
+  }
+
+  if (page === "products") {
+    return <RecommendationPage activePage={page} onNavigate={setPage} />;
   }
 
   return <PregnancyRoadmap activePage={page} onNavigate={setPage} />;
