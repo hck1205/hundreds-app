@@ -1,0 +1,233 @@
+[
+  {
+    "id": "weeks-1-4",
+    "startWeek": 1,
+    "endWeek": 4,
+    "trimesters": [
+      1
+    ],
+    "title": "1~4주차",
+    "videos": [
+      {
+        "title": "쉬즈메디 산모교실 - 임신 초기 증상 및 주의사항 [수원산부인과]",
+        "url": "https://www.youtube.com/watch?v=VOX3IQ9YZXQ&t=1s"
+      },
+      {
+        "title": "임신 극초기 증상 완벽 정리ㅣ 임신인지 아닌지 헷갈린다구요? ㅣ 마미살롱 멤버들은 이렇게 느꼈어요",
+        "url": "https://www.youtube.com/watch?v=Mod0j3f72eQ"
+      },
+      {
+        "title": "[임신 꿀정보] 어렵고 헷갈리는 임신 주수 계산법! 산부인과 전문의가 알려드려요💕",
+        "url": "https://www.youtube.com/watch?v=mlsNMOwYxy0"
+      },
+      {
+        "title": "[즐거운 임신여행] 임신 1~2주차편",
+        "url": "https://www.youtube.com/watch?v=nUwxRqGYgYM"
+      },
+      {
+        "title": "[즐거운 임신여행] 임신 3주차편",
+        "url": "https://www.youtube.com/watch?v=GIuJxwOvmls"
+      },
+      {
+        "title": "임신 초기 4주차 증상 ~ 임신 5주차 증상! 이것만 조심하세요!",
+        "url": "https://www.youtube.com/watch?v=U5YA6f7ZDv4"
+      },
+      {
+        "title": "[레디! 맘클라스 2화] 임신 초기! 무엇을 조심하고 챙겨야할까요?",
+        "url": "https://www.youtube.com/watch?v=1gSAAOsW-tc"
+      }
+    ],
+    "products": [
+      {
+        "name": "추천 상품 1",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      },
+      {
+        "name": "추천 상품 2",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      }
+    ]
+  },
+  {
+    "id": "weeks-5-8",
+    "startWeek": 5,
+    "endWeek": 8,
+    "trimesters": [
+      1
+    ],
+    "title": "5~8주차",
+    "videos": [],
+    "products": [
+      {
+        "name": "추천 상품 1",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      },
+      {
+        "name": "추천 상품 2",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      }
+    ]
+  },
+  {
+    "id": "weeks-9-12",
+    "startWeek": 9,
+    "endWeek": 12,
+    "trimesters": [
+      1
+    ],
+    "title": "9~12주차",
+    "videos": [],
+    "products": [
+      {
+        "name": "추천 상품 1",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      },
+      {
+        "name": "추천 상품 2",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      }
+    ]
+  },
+  {
+    "id": "weeks-13-16",
+    "startWeek": 13,
+    "endWeek": 16,
+    "trimesters": [
+      1,
+      2
+    ],
+    "title": "13~16주차",
+    "videos": [],
+    "products": [
+      {
+        "name": "추천 상품 1",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      },
+      {
+        "name": "추천 상품 2",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      }
+    ]
+  },
+  {
+    "id": "weeks-17-20",
+    "startWeek": 17,
+    "endWeek": 20,
+    "trimesters": [
+      2
+    ],
+    "title": "17~20주차",
+    "videos": [],
+    "products": [
+      {
+        "name": "추천 상품 1",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      },
+      {
+        "name": "추천 상품 2",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      }
+    ]
+  },
+  {
+    "id": "weeks-21-24",
+    "startWeek": 21,
+    "endWeek": 24,
+    "trimesters": [
+      2
+    ],
+    "title": "21~24주차",
+    "videos": [],
+    "products": [
+      {
+        "name": "추천 상품 1",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      },
+      {
+        "name": "추천 상품 2",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      }
+    ]
+  },
+  {
+    "id": "weeks-25-28",
+    "startWeek": 25,
+    "endWeek": 28,
+    "trimesters": [
+      2,
+      3
+    ],
+    "title": "25~28주차",
+    "videos": [],
+    "products": [
+      {
+        "name": "추천 상품 1",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      },
+      {
+        "name": "추천 상품 2",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      }
+    ]
+  },
+  {
+    "id": "weeks-29-32",
+    "startWeek": 29,
+    "endWeek": 32,
+    "trimesters": [
+      3
+    ],
+    "title": "29~32주차",
+    "videos": [],
+    "products": [
+      {
+        "name": "추천 상품 1",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      },
+      {
+        "name": "추천 상품 2",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      }
+    ]
+  },
+  {
+    "id": "weeks-33-36",
+    "startWeek": 33,
+    "endWeek": 36,
+    "trimesters": [
+      3
+    ],
+    "title": "33~36주차",
+    "videos": [],
+    "products": [
+      {
+        "name": "추천 상품 1",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      },
+      {
+        "name": "추천 상품 2",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      }
+    ]
+  },
+  {
+    "id": "weeks-37-40",
+    "startWeek": 37,
+    "endWeek": 40,
+    "trimesters": [
+      3
+    ],
+    "title": "37~40주차",
+    "videos": [],
+    "products": [
+      {
+        "name": "추천 상품 1",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      },
+      {
+        "name": "추천 상품 2",
+        "url": "https://link.coupang.com/a/REPLACE_ME"
+      }
+    ]
+  }
+]
