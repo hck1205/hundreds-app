@@ -19,12 +19,6 @@ export const Title = styled.h1`
   color: var(--text);
 `;
 
-export const Subtitle = styled.p`
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.6;
-`;
-
 export const FilterRow = styled.div`
   display: flex;
   flex-wrap: wrap;

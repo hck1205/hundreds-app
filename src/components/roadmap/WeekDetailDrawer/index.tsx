@@ -1,4 +1,4 @@
-import { useAtom, useAtomValue } from "jotai";
+import { useAtom, useAtomValue, useSetAtom } from "jotai";
 import Drawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
@@ -7,6 +7,11 @@ import Divider from "@mui/material/Divider";
 import CloseIcon from "@mui/icons-material/Close";
 import Tag from "../../common/Tag";
 import InfoSection from "../../common/InfoSection";
+import {
+  infoDetailDrawerOpenAtom,
+  infoDetailSelectionAtom,
+  type InfoCategory,
+} from "../../../atom/infoDetailAtom";
 import {
   activeWeekAtom,
   selectedTrimesterAtom,
@@ -35,6 +40,13 @@ export default function WeekDetailDrawer() {
   const activeWeek = useAtomValue(activeWeekAtom);
   const [drawerOpen, setDrawerOpen] = useAtom(weekDrawerOpenAtom);
   const selectedTrimester = useAtomValue(selectedTrimesterAtom);
+  const setInfoDrawerOpen = useSetAtom(infoDetailDrawerOpenAtom);
+  const setInfoSelection = useSetAtom(infoDetailSelectionAtom);
+
+  const handleInfoSelect = (category: InfoCategory, item: string) => {
+    setInfoSelection({ category, item });
+    setInfoDrawerOpen(true);
+  };
 
   return (
     <Drawer
@@ -43,7 +55,7 @@ export default function WeekDetailDrawer() {
       onClose={() => setDrawerOpen(false)}
       PaperProps={{
         sx: {
-          width: { xs: "100%", sm: 420 },
+          width: { xs: "100%", sm: 480 },
           backgroundColor: "var(--drawer-bg)",
           color: "var(--drawer-text)",
           padding: 3,
@@ -133,6 +145,7 @@ export default function WeekDetailDrawer() {
                 key={section.title}
                 title={section.title}
                 items={section.items}
+                onItemSelect={(item) => handleInfoSelect(section.key, item)}
               />
             ))
           : null}

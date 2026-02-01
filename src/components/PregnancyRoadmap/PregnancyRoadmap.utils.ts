@@ -10,12 +10,16 @@ export const getTrimesterLabel = (trimester: 1 | 2 | 3 | "all") => {
 
 export const buildWeekSections = (week: WeekInfo): WeekSection[] => {
   return [
-    { title: "필요 사항", items: week.needs },
-    { title: "준비", items: week.preparation },
-    { title: "영양", items: week.nutrients },
-    { title: "검사", items: week.tests },
-    { title: "피해야 할 음식", items: week.avoidFoods },
-    { title: "추천 운동", items: week.recommendedExercises },
+    { key: "needs", title: "필요 사항", items: week.needs },
+    { key: "preparation", title: "준비", items: week.preparation },
+    { key: "nutrients", title: "영양", items: week.nutrients },
+    { key: "tests", title: "검사", items: week.tests },
+    { key: "avoidFoods", title: "피해야 할 음식", items: week.avoidFoods },
+    {
+      key: "recommendedExercises",
+      title: "추천 운동",
+      items: week.recommendedExercises,
+    },
   ];
 };
 
