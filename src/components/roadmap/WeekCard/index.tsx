@@ -9,6 +9,7 @@ type WeekCardProps = {
   week: WeekInfo;
   isActive: boolean;
   onSelect: (week: number) => void;
+  isPriority?: boolean;
 };
 
 const Card = styled.button<{ $active: boolean }>`
@@ -92,8 +93,9 @@ const TagRow = styled.div`
   gap: 6px;
 `;
 
-export default function WeekCard({ week, isActive, onSelect }: WeekCardProps) {
+export default function WeekCard({ week, isActive, onSelect, isPriority }: WeekCardProps) {
   const { ref, inView } = useInViewOnce<HTMLDivElement>();
+  const shouldRenderImage = isPriority || inView;
 
   return (
     <Card
@@ -105,11 +107,13 @@ export default function WeekCard({ week, isActive, onSelect }: WeekCardProps) {
     >
       <TopRow>
         <Illustration ref={ref}>
-          {inView ? (
+          {shouldRenderImage ? (
             <IllustrationImage
               src={getFetalIllustration(week.week, week.trimester)}
               alt={`${week.week}주차 태아`}
-              loading="lazy"
+              loading={isPriority ? "eager" : "lazy"}
+              decoding="async"
+              fetchPriority={isPriority ? "high" : "auto"}
             />
           ) : (
             <IllustrationPlaceholder />

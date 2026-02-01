@@ -20,7 +20,7 @@ export default function WeekGrid() {
 
   return (
     <WeekGridContainer>
-      {weeks.map((week) => {
+      {weeks.map((week, index) => {
         const WeekComponent = weekComponentMap[week.week];
         if (!WeekComponent) {
           return null;
@@ -30,6 +30,7 @@ export default function WeekGrid() {
             key={week.week}
             isActive={selectedWeek === week.week}
             onSelect={handleSelect}
+            isPriority={index < 2}
           />
         );
       })}

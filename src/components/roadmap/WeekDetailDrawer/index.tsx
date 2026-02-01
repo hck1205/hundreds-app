@@ -114,6 +114,8 @@ export default function WeekDetailDrawer() {
               src={getFetalIllustration(activeWeek.week, activeWeek.trimester)}
               alt={`${activeWeek.week}주차 태아`}
               onClick={() => setImageOpen(true)}
+              loading="lazy"
+              decoding="async"
               sx={{
                 width: 120,
                 height: 84,
@@ -181,6 +183,8 @@ export default function WeekDetailDrawer() {
                 component="img"
                 src={getFetalIllustration(activeWeek.week, activeWeek.trimester)}
                 alt={`${activeWeek.week}주차 태아 확대 이미지`}
+                loading="eager"
+                decoding="async"
                 sx={{
                   width: "100%",
                   height: "100%",

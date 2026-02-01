@@ -5,12 +5,13 @@ import type { WeekInfo } from "../../../../types/WeekInfo";
 
 const week7Data = week7 as WeekInfo;
 
-export default function Week7({ isActive, onSelect }: WeekComponentProps) {
+export default function Week7({ isActive, onSelect, isPriority }: WeekComponentProps) {
   return (
     <WeekCard
       week={week7Data}
       isActive={isActive}
       onSelect={onSelect}
+      isPriority={isPriority}
     />
   );
 }
