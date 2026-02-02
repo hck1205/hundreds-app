@@ -186,11 +186,26 @@ export default function WeekVideoPage() {
 
             return (
               <WeekGroup key={group.id} id={group.id}>
-                <WeekGroupHeader>
+                <WeekGroupHeader
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => setActiveGroupId(isActive ? null : group.id)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      setActiveGroupId(isActive ? null : group.id);
+                    }
+                  }}
+                  aria-expanded={isActive}
+                  aria-controls={`${group.id}-content`}
+                >
                   <WeekGroupTitle>{group.title}</WeekGroupTitle>
                   <WeekGroupToggle
                     type="button"
-                    onClick={() => setActiveGroupId(isActive ? null : group.id)}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      setActiveGroupId(isActive ? null : group.id);
+                    }}
                     aria-expanded={isActive}
                     aria-controls={`${group.id}-content`}
                   >

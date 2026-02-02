@@ -259,24 +259,6 @@ export const VideoTitle = styled.span`
   line-height: 1.4;
 `;
 
-export const VideoSummaryButton = styled.button`
-  flex: 0 0 auto;
-  white-space: nowrap;
-  border: 1px solid var(--border);
-  background: var(--card);
-  color: var(--text);
-  border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 12px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-
-  &:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-  }
-`;
-
 export const VideoSummary = styled.p`
   margin: 0;
   color: var(--muted);
@@ -333,4 +315,21 @@ export const DisclaimerHeader = styled.div`
 
 export const VideoSectionHeader = styled.div`
   margin-bottom: 12px;
+`;
+export const VideoSummaryButton = styled.button`
+  flex: 0 0 auto;
+  white-space: nowrap;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
 `;
