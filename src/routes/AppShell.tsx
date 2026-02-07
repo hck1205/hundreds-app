@@ -1,8 +1,21 @@
 import { ComponentType, useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import NotFoundApp from "../apps/NotFoundApp";
+import type { AppManifestItem } from "../apps/manifest-types";
 
 const modules = import.meta.glob("../apps/*/App.tsx");
+const manifestModules = import.meta.glob("../apps/*/manifest.ts", { eager: true });
+
+const manifestBySlug = Object.values(manifestModules).reduce(
+  (acc, module) => {
+    const manifest = (module as { default: AppManifestItem }).default;
+    if (manifest) {
+      acc[manifest.slug] = manifest;
+    }
+    return acc;
+  },
+  {} as Record<string, AppManifestItem>
+);
 
 type AppModule = { default: ComponentType };
 
@@ -55,6 +68,15 @@ export default function AppShell() {
       active = false;
     };
   }, [loader]);
+
+  useEffect(() => {
+    if (!slug) {
+      return;
+    }
+
+    const manifest = manifestBySlug[slug];
+    document.title = manifest?.name ?? "앱을 찾을 수 없습니다";
+  }, [slug]);
 
   if (state.status === "loading" || state.status === "idle") {
     return <div aria-live="polite">페이지를 불러오는 중...</div>;

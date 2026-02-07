@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BASE_APP_PATH } from "@/apps/give-birth-to-roadmap/constants/appPaths";
 
@@ -29,6 +30,10 @@ const BackLink = styled(Link)`
 `;
 
 export default function NotFoundApp() {
+  useEffect(() => {
+    document.title = "앱을 찾을 수 없습니다";
+  }, []);
+
   return (
     <Main>
       <Card>

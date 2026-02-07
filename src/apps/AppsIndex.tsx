@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import type { AppManifestItem } from "./manifest-types";
 
@@ -70,6 +71,10 @@ const AppDescription = styled.p`
 const sortedApps = [...apps].sort((a, b) => a.name.localeCompare(b.name));
 
 export default function AppsIndex() {
+  useEffect(() => {
+    document.title = "Apps";
+  }, []);
+
   return (
     <Main>
       <Content>
