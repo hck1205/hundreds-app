@@ -20,6 +20,15 @@ import vtle from "./summaries/TLEMBcDxqp0.md?raw";
 import vzan from "./summaries/FzanU0L4ZNM.md?raw";
 import vcev from "./summaries/cEV-ULsR1ew.md?raw";
 import v3jw from "./summaries/3jw4EPxSB94.md?raw";
+import vwe3 from "./summaries/We3bOATMHVk.md?raw";
+import vjh2 from "./summaries/Jh2vcaLRQEA.md?raw";
+import vyay from "./summaries/yaYcvpyLfRY.md?raw";
+import vl08 from "./summaries/l08OOle6g00.md?raw";
+import vukv from "./summaries/ukVKt7Qatyw.md?raw";
+import vy1c from "./summaries/y1C8sbqaLNw.md?raw";
+import v9l6 from "./summaries/9L6xs8PwWuY.md?raw";
+import vfxz from "./summaries/fXzZcaeoi3k.md?raw";
+import vhxh from "./summaries/_hxHfyuBDVY.md?raw";
 
 export const videoSummaries: Record<string, string> = {
   VOX3IQ9YZXQ: vox3,
@@ -44,4 +53,13 @@ export const videoSummaries: Record<string, string> = {
   FzanU0L4ZNM: vzan,
   "cEV-ULsR1ew": vcev,
   "3jw4EPxSB94": v3jw,
+  We3bOATMHVk: vwe3,
+  Jh2vcaLRQEA: vjh2,
+  yaYcvpyLfRY: vyay,
+  l08OOle6g00: vl08,
+  ukVKt7Qatyw: vukv,
+  y1C8sbqaLNw: vy1c,
+  "9L6xs8PwWuY": v9l6,
+  fXzZcaeoi3k: vfxz,
+  _hxHfyuBDVY: vhxh,
 };

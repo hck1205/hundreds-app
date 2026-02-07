@@ -163,7 +163,44 @@
       2
     ],
     "title": "13~16주차",
-    "videos": [],
+    "videos": [
+      {
+        "title": "12~16주차 관련 영상 1",
+        "url": "https://www.youtube.com/watch?v=We3bOATMHVk"
+      },
+      {
+        "title": "12~16주차 관련 영상 2",
+        "url": "https://www.youtube.com/watch?v=Jh2vcaLRQEA"
+      },
+      {
+        "title": "12~16주차 관련 영상 3",
+        "url": "https://www.youtube.com/watch?v=yaYcvpyLfRY"
+      },
+      {
+        "title": "12~16주차 관련 영상 4",
+        "url": "https://www.youtube.com/watch?v=l08OOle6g00"
+      },
+      {
+        "title": "12~16주차 관련 영상 5",
+        "url": "https://www.youtube.com/watch?v=ukVKt7Qatyw"
+      },
+      {
+        "title": "12~16주차 관련 영상 6",
+        "url": "https://www.youtube.com/watch?v=y1C8sbqaLNw"
+      },
+      {
+        "title": "12~16주차 관련 영상 7",
+        "url": "https://www.youtube.com/watch?v=9L6xs8PwWuY"
+      },
+      {
+        "title": "12~16주차 관련 영상 8",
+        "url": "https://www.youtube.com/watch?v=fXzZcaeoi3k"
+      },
+      {
+        "title": "12~16주차 관련 영상 9",
+        "url": "https://www.youtube.com/watch?v=_hxHfyuBDVY"
+      }
+    ],
     "products": [
       {
         "name": "추천 상품 1",
